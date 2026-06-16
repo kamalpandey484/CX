@@ -11,7 +11,7 @@ export default function Page() {
     <div className="flex min-h-svh p-6">
       <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
         <div>
-          <p>Web page</p>
+          <p>Widget page</p>
           <Button onClick={() => addUsers()}>Add user</Button>
           <p>Users in database: {JSON.stringify(users)}</p>
         </div>

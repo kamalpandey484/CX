@@ -16,6 +16,11 @@ export const add = mutation({
       throw new Error("Not authenticated")
     }
 
+    const orgId = identity?.orgId as string
+    if (!orgId) {
+      throw new Error("Missing organization")
+    }
+
     const id = await ctx.db.insert("users", {
       name: "Kamal",
     })
