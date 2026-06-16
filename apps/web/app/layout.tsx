@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google"
 
+// @ts-ignore: side-effect import of global CSS without type declarations
 import "@workspace/ui/styles/globals.css"
+import { ClerkProvider } from "@clerk/nextjs"
 import { Providers } from "@/components/providers"
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -31,7 +33,9 @@ export default function RootLayout({
       )}
     >
       <body>
-        <Providers>{children}</Providers>
+        <ClerkProvider>
+          <Providers>{children}</Providers>
+        </ClerkProvider>
       </body>
     </html>
   )
