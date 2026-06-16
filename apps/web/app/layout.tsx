@@ -5,6 +5,7 @@ import "@workspace/ui/styles/globals.css"
 import { ClerkProvider } from "@clerk/nextjs"
 import { Providers } from "@/components/providers"
 import { cn } from "@workspace/ui/lib/utils"
+import { AuthGuard } from "@/modules/auth/ui/components/auth-guard"
 
 const fontSans = Geist({
   subsets: ["latin"],
