@@ -18,4 +18,3 @@ export function getCountryFromTimezone(timezone?: string) {
     name: country?.name || countryCode,
   }
 }
-}
